@@ -1,5 +1,5 @@
 $.getJSON("../data/exp.json", function(data) {
-    $("body").append(data);
+    console.log(data);
 })
 
 $(".cookieInfo").on("change", function() {
