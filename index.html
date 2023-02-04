@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Run Kingdom Calculators</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <div>
+        <label>Current Cookie Level:
+            <input type="number" id="startingCookieLevel" class="cookieInfo" value="1">
+        </label>
+    </div>
+
+    <div>
+        <label>Current Cookie Experience:
+            <input type="number" id="currentExperience" value="0">
+        </label>
+    </div>
+
+    <div>
+        <label>Target Cookie Level:
+            <input type="number" id="endingCookieLevel" class="cookieInfo" value="70">
+        </label>
+    </div>
+
+    <button id="calculateExperience">
+        Calculate Experience Needed
+    </button>
+    <div>
+        <p id="calculationResult"></p>
+    </div>
+
+    <!-- Import JavaScript / jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
