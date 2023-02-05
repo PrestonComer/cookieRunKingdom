@@ -1,3 +1,4 @@
+//*-----Experience Needed Calculation-----*//
 /** 
  * Gets the experience values needed at each cookie level and saves it in 'exp'
  */
@@ -61,3 +62,10 @@ function calculateExperience() {
 
     $("#calculationResult").text("Experience Points Needed: " + expNeeded.toLocaleString("en"));
 }
+
+//*-----Candy Count-----*//
+$(".candyCount").on("change", function() {
+    var minCount = 0;
+
+    if (this.value < minCount) { this.value = 0; }
+})
