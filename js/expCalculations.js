@@ -52,6 +52,7 @@ $("#calculateExperience").on("click", function() {
     
     if  (expNeeded < 0) {
         $("#calculationResult").text("Improper experience count detected.\n Please try again.")
+        return false;
     }
 
     $("#calculationResult").text("Experience Points Needed: " + expNeeded.toLocaleString("en"));
