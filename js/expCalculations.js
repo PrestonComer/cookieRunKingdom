@@ -68,4 +68,5 @@ $(".candyCount").on("change", function() {
     var minCount = 0;
 
     if (this.value < minCount) { this.value = 0; }
+    if (isNaN(this.value)) { this.value = 0; console.log("candy count NAN"); }
 })
