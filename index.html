@@ -11,36 +11,36 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
     <div class="sidebar">
         <!-- Sidebar -->
         <aside class="sidebar__sidebar">
-            <!-- The name of the company as well as the home button -->
+            <!-- The header / home button -->
             <a href="#"
                 data-target="#home"
                 class="pageLink">
                 <h2>Cookie Run Kingdom</h2>
             </a>
 
-            <!-- Links to the other pages -->
+            <!-- Category - Calculators -->
+            <h3 class="category">Calculators</h3>
+            <!-- Link - Experience -->
             <a href="#"
                 data-target="#expCalculator"
                 class="pageLink">
-                Calculate Experience
-            </a>
+                Experience</a>
+            <!-- Link - Skill Powder -->
             <a href="#"
                 data-target="#skillCalculator"
                 class="pageLink">
-                Calculate Skill Powder
-            </a>
+                Skill Powder</a>
         </aside>
     
         <!-- Main -->
         <main class="sidebar__main">
-            <div id="home" class="mainPage">
-                home page
-            </div>
+            <!-- Default page (home) -->
+            <div id="home" class="mainPage">home page</div>
 
+            <!-- Experience Calculator Page -->
             <div id="expCalculator" class="mainPage">
                 <p>Calculate Experience Needed To Upgrade To A Specific Cookie Level</p>
 
@@ -104,10 +104,6 @@
                         class="cookieInfo"
                         value="70">
                 </label> -->
-            
-                <button id="calculateExperience">
-                    Calculate Experience Needed
-                </button>
 
                 <div><p id="calculationResult"></p></div>
             </div>

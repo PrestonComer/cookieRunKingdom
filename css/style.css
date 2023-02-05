@@ -1,13 +1,14 @@
-/* Initial settings to prevent default margins messing up anything */
+/**-----Initial Settings----- */
+/* prevent default margins messing up anything */
 * { margin: 0; }
-
-/* Initial settings to pull the body of page down to the bottom of the page */
+/* pull the body of page down to the bottom of the page */
 html,
 body {
     height: 100%;
     overflow: hidden;
 }
 
+/**-----Sidebar Styling-----*/
 /* We want the sidebars to take the whole screen */
 .sidebar {
     display: flex;
@@ -33,20 +34,27 @@ body {
     flex: 1;
     overflow: auto;
 }
-
 /* Change the styling of the links on the left sidebar */
-a {
+.sidebar__sidebar > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
     text-decoration: none;
 }
+.sidebar__sidebar > a > h1 {
+    padding-top: 25px;
+}
 /* Let the user know which link they would be using if clicked */
-a:hover {
+.sidebar__sidebar > a:hover {
     color: rgb(182, 177, 177);
 }
-/* Space out the navigation links */
-aside > a:nth-child(2), aside > a:last-of-type {
-    margin-top: 100px;
+/**-----Sidebar Category Styling----- */
+h3.category {
+    padding-top: 55px;
+    padding-bottom: 0px;
+    text-decoration: underline;
 }
 
+/**-----Main Page Styling----- */
 .mainPage {
     /* We will show depending on which the user navigates to */
     display: none;

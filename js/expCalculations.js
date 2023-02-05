@@ -10,7 +10,7 @@ fetch("data/exp.json", { mode: "no-cors" })
 
 /** 
  * When cookie information (level) is changed check to make sure it
- * is in bounds of the game
+ * is in bounds of the game. if it is then adjust calculations
  */
 $(".cookieInfo").on("change", function() {
     var maxLevel = 70;
@@ -24,7 +24,7 @@ $(".cookieInfo").on("change", function() {
 
 /** 
  * When cookie information (experience) is changed check to make sure it is
- * in bounds of the game
+ * in bounds of the game. if it is then adjust calculations
  */
 $("#currentExperience").on("change", function() {
     var maxExp = 8938600;
@@ -40,7 +40,6 @@ $("#currentExperience").on("change", function() {
  * Get the user provided information and using the retrieved json determine how
  * much experience is needed until the cookie reaches the retrieved target level
  */
-// $("#calculateExperience").on("click", function() {
 function calculateExperience() {
     var startLevel = parseInt($("#startingCookieLevel").val());
     var endLevel = parseInt($("#endingCookieLevel").val());
@@ -61,5 +60,4 @@ function calculateExperience() {
     }
 
     $("#calculationResult").text("Experience Points Needed: " + expNeeded.toLocaleString("en"));
-// })
 }
