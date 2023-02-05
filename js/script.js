@@ -41,13 +41,13 @@ $("#calculateExperience").on("click", function() {
     var endLevel = parseInt($("#endingCookieLevel").val());
     var expNeeded = -parseInt($("#currentExperience").val());
 
-    if (startLevel >= endLevel) {
-        $("#calculationResult").text("Improper input detected.\n Please try again.")
-        return false;
-    }
-
     for (let virtualLevel = startLevel; virtualLevel < endLevel; virtualLevel++) {
         expNeeded += exp[virtualLevel + 1];
+    }
+
+    if (startLevel >= endLevel || (expNeeded < 0)) {
+        $("#calculationResult").text("Improper input detected.\n Please try again.")
+        return false;
     }
 
     $("#calculationResult").text("Experience Points Needed: " + expNeeded.toLocaleString("en"));
