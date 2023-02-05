@@ -1,6 +1,8 @@
 /**-----Initial Settings----- */
 /* prevent default margins messing up anything */
-* { margin: 0; }
+* { 
+    margin: 0;
+}
 /* pull the body of page down to the bottom of the page */
 html,
 body {
@@ -40,6 +42,7 @@ body {
     padding-bottom: 0px;
     text-decoration: none;
 }
+/* Add padding from top of the page and the header */
 .sidebar__sidebar > a > h1 {
     padding-top: 25px;
 }
@@ -47,22 +50,26 @@ body {
 .sidebar__sidebar > a:hover {
     color: rgb(182, 177, 177);
 }
+/* Have padding between all page links that are not the header */
+.sidebar__sidebar > a.pageLink:not(.header) {
+    padding-bottom: 5px;
+}
 /**-----Sidebar Category Styling----- */
 h3.category {
     padding-top: 55px;
-    padding-bottom: 0px;
+    padding-bottom: 5px;
     text-decoration: underline;
 }
 
 /**-----Main Page Styling----- */
+/* each page starts not displayed and is shown based on what link is pressed */
 .mainPage {
-    /* We will show depending on which the user navigates to */
     display: none;
     /* Make the page stretch to the whole page */
     height: 100%;
     width: 100%;
 }
+/* The home page is displayed by default */
 .mainPage#home {
-    /* The home page will be the default page */
     display: block;
 }
