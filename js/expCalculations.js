@@ -66,7 +66,7 @@ function calculateExperience() {
 //*-----Candy Count-----*//
 $(".candyCount").on("change", function() {
     var minCount = 0;
+    this.value.replace("\\D+\g", "")
 
-    if (this.value < minCount) { this.value = 0; }
-    if (isNaN(this.value)) { this.value = 0; console.log("candy count NAN"); }
+    if (this.value < minCount || this.value == "") { this.value = 0; }
 })
