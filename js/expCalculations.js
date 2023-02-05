@@ -50,7 +50,7 @@ $("#calculateExperience").on("click", function() {
         return false;
     }
     
-    if  (expNeeded < 0) {
+    if (expNeeded < 0) {
         $("#calculationResult").text("Improper experience count detected.\n Please try again.")
         return false;
     }
