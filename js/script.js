@@ -1,3 +1,6 @@
+/** 
+ * Gets the experience values needed at each cookie level and saves it in 'exp'
+ */
 var exp;
 fetch("data/exp.json", { mode: "no-cors" })
     .then(res => res.json())
@@ -5,6 +8,10 @@ fetch("data/exp.json", { mode: "no-cors" })
         exp = data;
     });
 
+/** 
+ * When cookie information (level) is changed check to make sure it
+ * is in bounds of the game
+ */
 $(".cookieInfo").on("change", function() {
     var maxLevel = 70;
     var minLevel = 1;
@@ -13,6 +20,10 @@ $(".cookieInfo").on("change", function() {
     if (this.value < minLevel) { this.value = minLevel; }
 })
 
+/** 
+ * When cookie information (experience) is changed check to make sure it is
+ * in bounds of the game
+ */
 $("#currentExperience").on("change", function() {
     var maxExp = 8938600;
     var minExp = 0;
@@ -21,10 +32,19 @@ $("#currentExperience").on("change", function() {
     if (this.value < minExp + 1) { this.value = minExp; }
 })
 
+/** 
+ * Get the user provided information and using the retrieved json determine how
+ * much experience is needed until the cookie reaches the retrieved target level
+ */
 $("#calculateExperience").on("click", function() {
     var startLevel = parseInt($("#startingCookieLevel").val());
     var endLevel = parseInt($("#endingCookieLevel").val());
     var expNeeded = -parseInt($("#currentExperience").val());
+
+    if (startLevel >= endLevel) {
+        $("#calculationResult").text("Improper input detected.\n Please try again.")
+        return false;
+    }
 
     for (let virtualLevel = startLevel; virtualLevel < endLevel; virtualLevel++) {
         expNeeded += exp[virtualLevel + 1];

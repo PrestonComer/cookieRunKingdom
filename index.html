@@ -19,24 +19,19 @@
             <a href="#"
                 data-target="#home"
                 class="pageLink">
-                <h2>Tulsa J's <br>Junk Removal</h2>
+                <h2>Cookie Run Kingdom</h2>
             </a>
 
             <!-- Links to the other pages -->
             <a href="#"
-                data-target="#pricing"
+                data-target="#expCalculator"
                 class="pageLink">
-                Pricing Explained
+                Calculate Experience
             </a>
             <a href="#"
-                data-target="#testimonials"
+                data-target="#skillCalculator"
                 class="pageLink">
-                Client Testimonials
-            </a>
-            <a href="#"
-                data-target="#bookAppointment"
-                class="pageLink">
-                Book Your Appointment
+                Calculate Skill Powder
             </a>
         </aside>
     
@@ -46,35 +41,33 @@
                 home page
             </div>
 
-            <div id="pricing" class="mainPage">
-                pricing page
+            <div id="expCalculator" class="mainPage">
+                <div>
+                    <label>Current Cookie Level:
+                        <input type="number" id="startingCookieLevel" class="cookieInfo" value="1">
+                    </label>
+                </div>
+            
+                <div>
+                    <label>Current Cookie Experience:
+                        <input type="number" id="currentExperience" value="0">
+                    </label>
+                </div>
+            
+                <div>
+                    <label>Target Cookie Level:
+                        <input type="number" id="endingCookieLevel" class="cookieInfo" value="70">
+                    </label>
+                </div>
+            
+                <button id="calculateExperience">
+                    Calculate Experience Needed
+                </button>
+                <div>
+                    <p id="calculationResult"></p>
+                </div>
             </div>
         </main>
-    </div>
-
-    <div>
-        <label>Current Cookie Level:
-            <input type="number" id="startingCookieLevel" class="cookieInfo" value="1">
-        </label>
-    </div>
-
-    <div>
-        <label>Current Cookie Experience:
-            <input type="number" id="currentExperience" value="0">
-        </label>
-    </div>
-
-    <div>
-        <label>Target Cookie Level:
-            <input type="number" id="endingCookieLevel" class="cookieInfo" value="70">
-        </label>
-    </div>
-
-    <button id="calculateExperience">
-        Calculate Experience Needed
-    </button>
-    <div>
-        <p id="calculationResult"></p>
     </div>
 
     <!-- Import JavaScript / jQuery-->
