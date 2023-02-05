@@ -45,29 +45,14 @@ $("#calculateExperience").on("click", function() {
         expNeeded += exp[virtualLevel + 1];
     }
 
-    if (startLevel >= endLevel || (expNeeded < 0)) {
+    if (startLevel >= endLevel) {
         $("#calculationResult").text("Improper input detected.\n Please try again.")
         return false;
     }
+    
+    if  (expNeeded < 0) {
+        $("#calculationResult").text("Improper experience count detected.\n Please try again.")
+    }
 
     $("#calculationResult").text("Experience Points Needed: " + expNeeded.toLocaleString("en"));
-})
-
-/**
- * Iterates through the main pages and hide them all
- */
-function hideAllPages() {
-    $(".mainPage").each(function() {
-        $(this).hide();
-    });
-}
-
-/**
- * Attach the click event to navigation links to hide all
- * pages then show the one that matches the link pressed
- */
-$('aside.sidebar__sidebar > a').on("click", function() {
-    hideAllPages();
-    // show the page of the link clicked on
-    $(this.dataset.target).show();
 })
