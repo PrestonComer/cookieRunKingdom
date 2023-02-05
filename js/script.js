@@ -8,21 +8,17 @@ fetch("data/exp.json", { mode: "no-cors" })
 $(".cookieInfo").on("change", function() {
     var maxLevel = 70;
     var minLevel = 1;
-    var currentLevel = this.value;
 
-    if (currentLevel > maxLevel) { currentLevel = maxLevel; }
-    if (currentLevel < minLevel) { currentLevel = minLevel; }
-    this.value = currentLevel;
+    if (this.value > maxLevel) { this.value = maxLevel; }
+    if (this.value < minLevel) { this.value = minLevel; }
 })
 
 $("#currentExperience").on("change", function() {
     var maxExp = 8938600;
     var minExp = 0;
-    var currentExp = this.value;
 
-    if (currentExp > maxExp) { currentExp = maxExp; }
-    if (currentExp < minExp + 1) { currentExp = minExp; }
-    this.value = currentExp;
+    if (this.value > maxExp) { this.value = maxExp; }
+    if (this.value < minExp + 1) { this.value = minExp; }
 })
 
 $("#calculateExperience").on("click", function() {
