@@ -1,4 +1,4 @@
-fetch("../data/exp.json", { mode: "no-cors" })
+fetch("data/exp.json", { mode: "no-cors" })
     .then((res) => res.json())
     .then((data) => console.log(data))
 
