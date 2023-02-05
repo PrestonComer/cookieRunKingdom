@@ -1,0 +1,60 @@
+/* Initial settings to prevent default margins messing up anything */
+* { margin: 0; }
+
+/* Initial settings to pull the body of page down to the bottom of the page */
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* We want the sidebars to take the whole screen */
+.sidebar {
+    display: flex;
+    height: 100%;
+}
+/* The left column is for navigation */
+.sidebar__sidebar {
+    background-color: rgb(66, 64, 64);
+    border-right: 3px black solid;
+    margin-right: 5px;
+    text-align: center;
+    width: 205px;
+}
+/* Customize each item in the sidebar to stand out from better */
+.sidebar__sidebar > * {
+    color: white;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* The right column should take the remaining space and be scrollable */
+.sidebar__main {
+    flex: 1;
+    overflow: auto;
+}
+
+/* Change the styling of the links on the left sidebar */
+a {
+    text-decoration: none;
+}
+/* Let the user know which link they would be using if clicked */
+a:hover {
+    color: rgb(182, 177, 177);
+}
+/* Space out the navigation links */
+aside > a:nth-child(2), aside > a:last-of-type {
+    margin-top: 100px;
+}
+
+.mainPage {
+    /* We will show depending on which the user navigates to */
+    display: none;
+    /* Make the page stretch to the whole page */
+    height: 100%;
+    width: 100%;
+}
+.mainPage#home {
+    /* The home page will be the default page */
+    display: block;
+}
