@@ -20,7 +20,7 @@ $("#currentExperience").on("change", function() {
     var currentExp = this.value;
 
     if (currentExp > maxExp) { currentExp = maxExp; }
-    if (currentExp < minExp) { currentExp = minExp; }
+    if (currentExp < minExp + 1) { currentExp = minExp; }
 })
 
 $("#calculateExperience").on("click", function() {
