@@ -42,25 +42,68 @@
             </div>
 
             <div id="expCalculator" class="mainPage">
-                <label>Current Cookie Level:
+                <p>Calculate Experience Needed To Upgrade To A Specific Cookie Level</p>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>From:</td>
+                            <td>
+                                <input type="number"
+                                    id="startingCookieLevel"
+                                    class="cookieInfo"
+                                    value="1">
+                            <td>Level</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>From:</td>
+                            <td>
+                                <input type="number"
+                                    id="currentExperience"
+                                    value="0">
+                            <td>Experience</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>To:</td>
+                            <td>
+                                <input type="number"
+                                    id="endingCookieLevel"
+                                    class="cookieInfo"
+                                    value="70">
+                            <td>Level</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- <label>Current Cookie Level:
                     <input type="number"
                         id="startingCookieLevel"
                         class="cookieInfo"
                         value="1">
-                </label>
+                </label> -->
 
-                <label>Current Cookie Experience:
+                <!-- <label>Current Cookie Experience:
                     <input type="number"
                         id="currentExperience"
                         value="0">
-                </label>
+                </label> -->
 
-                <label>Target Cookie Level:
+                <!-- <label>Target Cookie Level:
                     <input type="number"
                         id="endingCookieLevel"
                         class="cookieInfo"
                         value="70">
-                </label>
+                </label> -->
             
                 <button id="calculateExperience">
                     Calculate Experience Needed

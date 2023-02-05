@@ -18,6 +18,8 @@ $(".cookieInfo").on("change", function() {
 
     if (this.value > maxLevel) { this.value = maxLevel; }
     if (this.value < minLevel) { this.value = minLevel; }
+
+    calculateExperience();
 })
 
 /** 
@@ -30,13 +32,16 @@ $("#currentExperience").on("change", function() {
 
     if (this.value > maxExp) { this.value = maxExp; }
     if (this.value < minExp + 1) { this.value = minExp; }
+
+    calculateExperience();
 })
 
 /** 
  * Get the user provided information and using the retrieved json determine how
  * much experience is needed until the cookie reaches the retrieved target level
  */
-$("#calculateExperience").on("click", function() {
+// $("#calculateExperience").on("click", function() {
+function calculateExperience() {
     var startLevel = parseInt($("#startingCookieLevel").val());
     var endLevel = parseInt($("#endingCookieLevel").val());
     var expNeeded = -parseInt($("#currentExperience").val());
@@ -56,4 +61,5 @@ $("#calculateExperience").on("click", function() {
     }
 
     $("#calculationResult").text("Experience Points Needed: " + expNeeded.toLocaleString("en"));
-})
+// })
+}
