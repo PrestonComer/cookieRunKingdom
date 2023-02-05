@@ -1,6 +1,6 @@
-$.getJSON("../data/exp.json", function(data) {
-    console.log(data);
-})
+fetch("../data/exp.json", { mode: "no-cors" })
+    .then((res) => res.json())
+    .then((data) => console.log(data))
 
 $(".cookieInfo").on("change", function() {
     if (this.value > 70) {
