@@ -12,6 +12,7 @@ $(".cookieInfo").on("change", function() {
 
     if (currentLevel > maxLevel) { currentLevel = maxLevel; }
     if (currentLevel < minLevel) { currentLevel = minLevel; }
+    this.value = currentLevel;
 })
 
 $("#currentExperience").on("change", function() {
@@ -21,6 +22,7 @@ $("#currentExperience").on("change", function() {
 
     if (currentExp > maxExp) { currentExp = maxExp; }
     if (currentExp < minExp + 1) { currentExp = minExp; }
+    this.value = currentExp;
 })
 
 $("#calculateExperience").on("click", function() {
