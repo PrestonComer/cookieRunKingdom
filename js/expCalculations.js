@@ -5,9 +5,7 @@
 var exp;
 fetch("data/exp.json", { mode: "no-cors" })
     .then(res => res.json())
-    .then(data => {
-        exp = data;
-    });
+    .then(data => { exp = data; });
 
 /** 
  * When cookie information (level) is changed check to make sure it
@@ -60,13 +58,42 @@ function calculateExperience() {
         return false;
     }
 
-    $("#calculationResult").text("Experience Points Needed: " + expNeeded.toLocaleString("en"));
+    $("#calculationResult").text("Experience Required: " + expNeeded.toLocaleString("en"));
 }
 
 //*-----Candy Count-----*//
+/** 
+ * Gets the experience values given by each candy at each research level
+ */
+var candy;
+fetch("data/expPerJelly.json", { mode: "no-cors" })
+    .then(res => res.json())
+    .then(data => { candy = data; });
+/** 
+ * Limit the values for each level of candy to only positive numbers. Then
+ * calculate the total based on those values
+ */
 $(".candyCount").on("change", function() {
     var minCount = 0;
-    this.value.replace("\\D+\g", "")
+    this.value.replace("\\D+\g", "");
 
     if (this.value < minCount || this.value == "") { this.value = 0; }
+
+    calculateTotalCandy();
 })
+
+/** 
+ * Calculate the total experience the user has given the amount of 
+ * candy at each level 
+ */
+function calculateTotalCandy() {
+    var researchLevel = $("#tastierJellyResearchLevel").val();
+    var totalExperience = 0;
+
+    $(".candyCount").each(function() {
+        var currentCandy = $(this);
+        totalExperience += candy[currentCandy.data("candyLevel")][researchLevel]
+    })
+
+    $("#totalCandyResult").text("Experience In Candy: " + totalExperience.toLocaleString("en"));
+}
