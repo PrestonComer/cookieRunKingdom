@@ -91,8 +91,12 @@ function calculateTotalCandy() {
     var totalExperience = 0;
 
     $(".candyCount").each(function() {
-        totalExperience += ($(this).val() * candy[$(this).data("candylevel")][researchLevel])
-        console.log(totalExperience, candy[$(this).data("candylevel")][researchLevel])
+        var currentCandy = $(this);
+        var candyValue = candy[currentCandy.data("candylevel")][researchLevel];
+        var currentCandyExperience = currentCandy.val() * candyValue;
+        
+        $("#"+currentCandy.data("candylevel")+"Candy").text(" - " + currentCandyExperience)
+        totalExperience += currentCandyExperience
     })
     $("#totalCandyResult").text("Experience In Candy: " + totalExperience.toLocaleString("en"));
 }
