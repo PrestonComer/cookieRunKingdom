@@ -84,7 +84,8 @@ $(".candyCount").on("change", function() {
 
 /** 
  * Calculate the total experience the user has given the amount of 
- * candy at each level 
+ * candy at each level and add them together giving the total experience 
+ * of all candy
  */
 function calculateTotalCandy() {
     var researchLevel = $("#tastierJellyResearchLevel").val();
@@ -94,8 +95,8 @@ function calculateTotalCandy() {
         var currentCandy = $(this);
         var candyValue = candy[currentCandy.data("candylevel")][researchLevel];
         var currentCandyExperience = currentCandy.val() * candyValue;
-        
-        $("#"+currentCandy.data("candylevel")+"Candy").text(" - " + currentCandyExperience)
+
+        $("#"+currentCandy.dataset.candylevel+"Count").text(" - " + currentCandyExperience)
         totalExperience += currentCandyExperience
     })
     $("#totalCandyResult").text("Experience In Candy: " + totalExperience.toLocaleString("en"));
