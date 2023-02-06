@@ -92,7 +92,7 @@ function calculateTotalCandy() {
 
     $(".candyCount").each(function() {
         var currentCandy = $(this);
-        totalExperience += candy[currentCandy.data("candyLevel")][researchLevel]
+        totalExperience += candy[currentCandy.data("candylevel")][researchLevel]
     })
 
     $("#totalCandyResult").text("Experience In Candy: " + totalExperience.toLocaleString("en"));
