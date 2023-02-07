@@ -81,3 +81,12 @@ h3.category {
     padding: 3px;
     width: fit-content;
 }
+#expRequiredInstructions {
+    border-bottom: solid black 1px;
+}
+#expRequiredResults {
+    border-top: solid black 1px;
+}
+#expRequired > table > td {
+    width: min-content;
+}
