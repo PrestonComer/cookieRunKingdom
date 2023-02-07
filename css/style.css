@@ -98,19 +98,16 @@ h3.category {
 }
 
 /**-----Experience In Candys Calculator Styling----- */
-#tastierJellyLabel {
-    background-color: lightblue;
-}
 table#totalExpInCandy {
     border: solid black 1px;
     padding: 4px;
     margin: 3%;
 }
-table#totalExpInCandy > tbody > tr:first-child {
+#tastierJellyLabel {
     border: solid black 1px;
     padding: 4px;
 }
-table#totalExpInCandy > tbody > tr:last-child {
+#totalCandyResult {
     border-top: solid black 1px;
     padding: 4px;
 }
