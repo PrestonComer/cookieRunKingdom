@@ -83,6 +83,13 @@ $(".candyCount").on("change", function() {
 })
 
 /** 
+ * When the user changes their level of research recalculate the total experience
+ */
+$("#tastierJellyResearchLevel").on("change", function() {
+    calculateTotalCandy();
+})
+
+/** 
  * Calculate the total experience the user has given the amount of 
  * candy at each level and add them together giving the total experience 
  * of all candy
@@ -105,4 +112,4 @@ function calculateTotalCandy() {
             totalString = " Over 100 Million" :
             totalString = totalExperience.toLocaleString("en");
     $("#totalCandyResult").text("Experience In Candy: " + totalString);
-}
+}/**  */
