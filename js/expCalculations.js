@@ -49,12 +49,12 @@ function calculateExperience() {
     }
 
     if (startLevel >= endLevel) {
-        $("#calculationResult").text("Improper Input Detected.\n Please Try Again.")
+        $("#calculationResult").text("Improper Input Detected.")
         return false;
     }
     
     if (expNeeded < 0) {
-        $("#calculationResult").text("Current Experience Exceeds Needed Experience.\n Please Try Again.")
+        $("#calculationResult").text("Current Experience Exceeds Needed Experience.")
         return false;
     }
 
