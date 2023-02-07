@@ -90,3 +90,8 @@ h3.category {
 #expRequired > table > tbody > tr > td {
     width: min-content;
 }
+
+/**-----Experience In Candys Calculator Styling----- */
+#tastierJellyLabel {
+    background-color: lightblue;
+}
