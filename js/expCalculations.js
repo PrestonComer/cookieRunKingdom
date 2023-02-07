@@ -101,10 +101,10 @@ function calculateTotalCandy() {
     $(".candyCount").each(function() {
         var currentCandy = $(this);
         var candyValue = candy[currentCandy.data("candylevel")][researchLevel];
-        // var currentCandyExperience = currentCandy.val() * candyValue;
 
-        // $("#"+currentCandy.data("candylevel")+"Count").text(" - " + currentCandyExperience.toLocaleString("en"));
-        // totalExperience += currentCandyExperience;
+        console.log("-------");
+        // console.log("research" + )
+
         totalExperience += currentCandy.val() * candyValue;
     })
     
@@ -112,4 +112,4 @@ function calculateTotalCandy() {
             totalString = " Over 100 Million" :
             totalString = totalExperience.toLocaleString("en");
     $("#totalCandyResult").text("Experience In Candy: " + totalString);
-}/**  */
+}
