@@ -54,7 +54,7 @@ function calculateExperience() {
     }
     
     if (expNeeded < 0) {
-        $("#calculationResult").text("Current Experience Exceeds Needed Experience.")
+        $("#calculationResult").text("Improper Current Experience.")
         return false;
     }
 
