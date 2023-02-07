@@ -73,3 +73,11 @@ h3.category {
 .mainPage#home {
     display: block;
 }
+
+/**-----Experience Required Calculator Styling----- */
+#expRequired {
+    margin: 3%;
+    border: solid black 1px;
+    padding: 3px;
+    width: fit-content;
+}
