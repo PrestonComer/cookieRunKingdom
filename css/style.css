@@ -87,6 +87,6 @@ h3.category {
 #expRequiredResults {
     border-top: solid black 1px;
 }
-#expRequired > table > td {
+#expRequired > table > tbody > tr > td {
     width: min-content;
 }
