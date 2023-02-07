@@ -73,6 +73,12 @@ h3.category {
 .mainPage#home {
     display: block;
 }
+/* !!!!!!!!! Showing the current page working on as the home page for now */
+.mainPage#home {
+    display: none;
+} .mainPage#expCalculator {
+    display: block;
+}
 
 /**-----Experience Required Calculator Styling----- */
 #expRequired {

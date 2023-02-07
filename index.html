@@ -98,19 +98,23 @@
 
                 <br>
 
-                <label id="tastierJellyLabel">Tastier Star Jellies Research Level:
-                    <select id="tastierJellyResearchLevel">
-                        <option value="0">N/A</option>
-                        <option value="1">1</option>
-                        <option value="3">2</option>
-                        <option value="5">3</option>
-                        <option value="7">4</option>
-                        <option value="10">5</option>
-                    </select>
-                </label>
-
                 <table>
                     <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <label id="tastierJellyLabel">Tastier Star Jellies Research Level:
+                                    <select id="tastierJellyResearchLevel">
+                                        <option value="0">N/A</option>
+                                        <option value="1">1</option>
+                                        <option value="3">2</option>
+                                        <option value="5">3</option>
+                                        <option value="7">4</option>
+                                        <option value="10">5</option>
+                                    </select>
+                                </label>
+                            </td>
+                        </tr>
+
                         <tr>
                             <td>Level 1 Candy:</td>
                             <td>
@@ -119,7 +123,6 @@
                                     data-candyLevel=1
                                     value="0">
                             </td>
-                            <td id="1Count"> - 0</td>
                         </tr>
 
                         <tr>
@@ -130,7 +133,6 @@
                                     data-candyLevel=2
                                     value="0">
                             </td>
-                            <td id="2Count"> - 0</td>
                         </tr>
 
                         <tr>
@@ -141,7 +143,6 @@
                                     data-candyLevel=3
                                     value="0">
                             </td>
-                            <td id="3Count"> - 0</td>
                         </tr>
 
                         <tr>
@@ -152,7 +153,6 @@
                                     data-candyLevel=4
                                     value="0">
                             </td>
-                            <td id="4Count"> - 0</td>
                         </tr>
 
                         <tr>
@@ -163,7 +163,6 @@
                                     data-candyLevel=5
                                     value="0">
                             </td>
-                            <td id="5Count"> - 0</td>
                         </tr>
 
                         <tr>
@@ -174,7 +173,6 @@
                                     data-candyLevel=6
                                     value="0">
                             </td>
-                            <td id="6Count"> - 0</td>
                         </tr>
 
                         <tr>
@@ -185,7 +183,6 @@
                                     data-candyLevel=7
                                     value="0">
                             </td>
-                            <td id="7Count"> - 0</td>
                         </tr>
 
                         <tr>
@@ -196,12 +193,16 @@
                                     data-candyLevel=8
                                     value="0">
                             </td>
-                            <td id="8Count"> - 0</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <p id="totalCandyResult">Experience In Candy: N/A</p>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
 
-                <div><p id="totalCandyResult">Experience In Candy: N/A</p></div>
                 <!-- Experience Page End -->
             </div>
         </main>
