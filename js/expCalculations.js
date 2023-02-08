@@ -132,7 +132,7 @@ function calculateTotalCandy() {
 
 //!-----Dynamically create tastier jelly table-----*//
 // console.log(candy);
-for (var item in candy) {
+for (var item in candy[0]) {
     console.log(item)
 };
 $.each(candy, function(key, item) {
