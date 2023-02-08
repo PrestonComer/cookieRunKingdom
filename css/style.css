@@ -97,7 +97,7 @@ h3.category {
 #expRequired > table > tbody > tr > td {
     width: min-content;
 }
-#expRequired > p {
+#expCalculator > p {
     padding: 3%;
 }
 
