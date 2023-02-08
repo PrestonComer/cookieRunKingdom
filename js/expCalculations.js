@@ -65,14 +65,10 @@ function calculateExperience() {
 /** 
  * Gets the information of cookie houses at each of their levels
  */
-var cookieHouse;
 fetch("data/cookieHouses.json", { mode: "no-cors" })
     .then(res => res.json())
     .then(data => {
-        cookieHouse = data;
-        console.log("start");
-        console.log("cookieHouse", cookieHouse);
-        $.each(cookieHouse.data, function(key, item) {
+        $.each(data, function(key, item) {
             console.log("key", key);
             console.log("item", item);
             $("#cookieHouseTable > tbody").append("\
@@ -83,7 +79,6 @@ fetch("data/cookieHouses.json", { mode: "no-cors" })
                 </tr>"
             )
         });
-        console.log("end");
     });
 
 //!-----Candy Count-----*//
