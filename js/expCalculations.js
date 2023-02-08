@@ -91,34 +91,7 @@ fetch("data/expPerJelly.json", { mode: "no-cors" })
     .then(data => {
         candy = data;
         createTastierJellyTable();
-        // $.each(candy, function(key, item) {
-        //     $("#tastierJellyTable > tbody").append("\
-        //         <tr>\
-        //             <td>" + key + "</td>\
-        //             <td>" + item[0] + "</td>\
-        //             <td>" + item[1] + "</td>\
-        //             <td>" + item[2] + "</td>\
-        //             <td>" + item[3] + "</td>\
-        //             <td>" + item[4] + "</td>\
-        //         </tr>"
-        //     )
-        // })
     });
-
-function createTastierJellyTable() {
-    $.each(candy, function(key, item) {
-        $("#tastierJellyTable > tbody").append("\
-            <tr>\
-                <td>" + key + "</td>\
-                <td>" + item[0] + "</td>\
-                <td>" + item[1] + "</td>\
-                <td>" + item[2] + "</td>\
-                <td>" + item[3] + "</td>\
-                <td>" + item[4] + "</td>\
-            </tr>"
-        )
-    })
-}
 
 /** 
  * Limit the values for each level of candy to only positive numbers. Then
@@ -156,8 +129,28 @@ function calculateTotalCandy() {
         totalExperience += currentCandy.val() * candyValue;
     })
     
-    var totalString = (totalExperience > 100000000) ? 
-            totalString = " Over 100 Million" :
+    var totalString = (totalExperience > 100000000000000) ? 
+            totalString = " Over 100 Billion" :
             totalString = totalExperience.toLocaleString("en");
     $("#totalCandyResult").text("Experience In Candy: " + totalString);
+}
+
+//!-----Tastier Jelly Research effect on candy exp----*//
+/** 
+ * Dynamically fill in a table containing the information about the exp of each 
+ * level of candy at each level of tastier jelly research
+ */
+function createTastierJellyTable() {
+    $.each(candy, function(key, item) {
+        $("#tastierJellyTable > tbody").append("\
+            <tr>\
+                <td>" + key + "</td>\
+                <td>" + item[0] + "</td>\
+                <td>" + item[1] + "</td>\
+                <td>" + item[2] + "</td>\
+                <td>" + item[3] + "</td>\
+                <td>" + item[4] + "</td>\
+            </tr>"
+        )
+    })
 }
