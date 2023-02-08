@@ -90,19 +90,35 @@ fetch("data/expPerJelly.json", { mode: "no-cors" })
     .then(res => res.json())
     .then(data => {
         candy = data;
-        $.each(candy, function(key, item) {
-            $("#tastierJellyTable > tbody").append("\
-                <tr>\
-                    <td>" + key + "</td>\
-                    <td>" + item[0] + "</td>\
-                    <td>" + item[1] + "</td>\
-                    <td>" + item[2] + "</td>\
-                    <td>" + item[3] + "</td>\
-                    <td>" + item[4] + "</td>\
-                </tr>"
-            )
-        })
+        createTastierJellyTable();
+        // $.each(candy, function(key, item) {
+        //     $("#tastierJellyTable > tbody").append("\
+        //         <tr>\
+        //             <td>" + key + "</td>\
+        //             <td>" + item[0] + "</td>\
+        //             <td>" + item[1] + "</td>\
+        //             <td>" + item[2] + "</td>\
+        //             <td>" + item[3] + "</td>\
+        //             <td>" + item[4] + "</td>\
+        //         </tr>"
+        //     )
+        // })
     });
+
+function createTastierJellyTable() {
+    $.each(candy, function(key, item) {
+        $("#tastierJellyTable > tbody").append("\
+            <tr>\
+                <td>" + key + "</td>\
+                <td>" + item[0] + "</td>\
+                <td>" + item[1] + "</td>\
+                <td>" + item[2] + "</td>\
+                <td>" + item[3] + "</td>\
+                <td>" + item[4] + "</td>\
+            </tr>"
+        )
+    })
+}
 
 /** 
  * Limit the values for each level of candy to only positive numbers. Then

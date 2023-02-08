@@ -76,7 +76,7 @@ h3.category {
 /* !!!!!!!!! Showing the current page working on as the home page for now */
 .mainPage#home {
     display: none;
-} .mainPage#expCalculator {
+} .mainPage#expInCandy {
     display: block;
 }
 
