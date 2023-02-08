@@ -128,3 +128,15 @@ function calculateTotalCandy() {
             totalString = totalExperience.toLocaleString("en");
     $("#totalCandyResult").text("Experience In Candy: " + totalString);
 }
+
+//!-----Dynamically create tastier jelly table-----*//
+console.log(candy);
+$.each(candy, function(key, item) {
+    $("#tastierJellyTable > tbody").append("\
+        <tr>\
+            <td>\
+                ---------------\
+            </td>\
+        </tr>\
+    ")
+})
