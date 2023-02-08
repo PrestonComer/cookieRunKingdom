@@ -73,9 +73,9 @@ fetch("data/cookieHouses.json", { mode: "no-cors" })
             console.log("item", item);
             $("#cookieHouseTable > tbody").append("\
                 <tr>\
-                    <td>{" + key + "</td>\
-                    <td>{" + item[0] + "</td>\
-                    <td>{" + item[1] + "</td>\
+                    <td>" + key + "</td>\
+                    <td>" + item[0] + "</td>\
+                    <td>" + item[1] + "</td>\
                 </tr>"
             )
         });

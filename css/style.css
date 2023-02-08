@@ -101,6 +101,23 @@ h3.category {
     padding: 3%;
 }
 
+/**-----Cookie House Table Styling-----  */
+#cookieHouseTable {
+    border: solid black 1px;
+    margin: 3%;
+    margin-top: 0px;
+    padding: 8px;
+    border-spacing: 0px;
+}
+#cookieHouseTable > tbody > tr > * {
+    border-right: solid black 1px;
+    padding-right: 4px;
+    border-bottom: solid black 1px;
+}
+#cookieHouseTable > tbody > tr > *:last-child {
+    border-right: none;
+}
+
 /**-----Experience In Candys Calculator Styling----- */
 table#totalExpInCandy {
     border: solid black 1px;
