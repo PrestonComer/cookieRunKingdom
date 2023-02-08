@@ -68,14 +68,14 @@ function calculateExperience() {
 var cookieHouse;
 fetch("data/cookieHouses.json", { mode: "no-cors" })
     .then(res => res.json())
-    .then(data => { cookieHouse = data; });
+    .then(data => { cookieHouse = $.parseJSON(data); });
 
-cookieHouse.each(function() {
+$.each(cookieHouse, function(key, item) {
     $("#cookieHouseTable > tbody").append("\
         <tr>\
-            <td>{this}</td>\
-            <td>{this[0]}</td>\
-            <td>{this[1]}</td>\
+            <td>{" + key + "</td>\
+            <td>{" + item[0] + "</td>\
+            <td>{" + item[1] + "</td>\
         </tr>"
     )
 })
@@ -120,10 +120,6 @@ function calculateTotalCandy() {
     $(".candyCount").each(function() {
         var currentCandy = $(this);
         var candyValue = candy[currentCandy.data("candylevel")][researchLevel];
-
-        console.log("-------");
-        console.log("research: " + researchLevel);
-        console.log("candy expected: " + candy[currentCandy.data("candylevel")]);
 
         totalExperience += currentCandy.val() * candyValue;
     })
