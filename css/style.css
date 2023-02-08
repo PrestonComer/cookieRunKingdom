@@ -125,7 +125,7 @@ h3.category {
 #cookieHouseTable > tbody > tr {
     text-align: center;
 }
-#cookieHouseText {
+#expCalculator > p#cookieHouseText {
     padding-top: 0px;
 }
 .divSpacer {
