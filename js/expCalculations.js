@@ -103,7 +103,7 @@ function calculateTotalCandy() {
         var candyValue = candy[currentCandy.data("candylevel")][researchLevel];
 
         console.log("-------");
-        console.log("research" + researchLevel);
+        console.log("research: " + researchLevel);
         console.log("candy expected: " + candy[currentCandy.data("candylevel")]);
 
         totalExperience += currentCandy.val() * candyValue;
