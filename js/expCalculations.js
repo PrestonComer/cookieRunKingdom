@@ -68,22 +68,23 @@ function calculateExperience() {
 var cookieHouse;
 fetch("data/cookieHouses.json", { mode: "no-cors" })
     .then(res => res.json())
-    .then(data => { cookieHouse = data; });
-
-    console.log("start");
-    console.log("cookieHouse", cookieHouse);
-    $.each(cookieHouse.data, function(key, item) {
-        console.log("key", key);
-        console.log("item", item);
-        $("#cookieHouseTable > tbody").append("\
-            <tr>\
-                <td>{" + key + "</td>\
-                <td>{" + item[0] + "</td>\
-                <td>{" + item[1] + "</td>\
-            </tr>"
-        )
+    .then(data => {
+        cookieHouse = data;
+        console.log("start");
+        console.log("cookieHouse", cookieHouse);
+        $.each(cookieHouse.data, function(key, item) {
+            console.log("key", key);
+            console.log("item", item);
+            $("#cookieHouseTable > tbody").append("\
+                <tr>\
+                    <td>{" + key + "</td>\
+                    <td>{" + item[0] + "</td>\
+                    <td>{" + item[1] + "</td>\
+                </tr>"
+            )
+        });
+        console.log("end");
     });
-    console.log("end");
 
 //!-----Candy Count-----*//
 /** 
