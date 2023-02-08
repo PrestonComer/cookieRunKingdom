@@ -86,6 +86,7 @@ h3.category {
     border: solid black 1px;
     padding: 3px;
     width: fit-content;
+    float: left;
 }
 #expRequiredInstructions {
     border-bottom: solid black 1px;
@@ -95,6 +96,9 @@ h3.category {
 }
 #expRequired > table > tbody > tr > td {
     width: min-content;
+}
+#expRequired > p {
+    padding: 3%;
 }
 
 /**-----Experience In Candys Calculator Styling----- */
