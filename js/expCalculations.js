@@ -87,6 +87,7 @@ var candy;
 fetch("data/expPerJelly.json", { mode: "no-cors" })
     .then(res => res.json())
     .then(data => { candy = data; });
+
 /** 
  * Limit the values for each level of candy to only positive numbers. Then
  * calculate the total based on those values
@@ -130,12 +131,30 @@ function calculateTotalCandy() {
 }
 
 //!-----Dynamically create tastier jelly table-----*//
-console.log(candy);
+// console.log(candy);
+for (var item in candy) {
+    console.log(item)
+};
 $.each(candy, function(key, item) {
     $("#tastierJellyTable > tbody").append("\
         <tr>\
             <td>\
-                ---------------\
+                ---\
+            </td>\
+            <td>\
+                ---\
+            </td>\
+            <td>\
+                ---\
+            </td>\
+            <td>\
+                ---\
+            </td>\
+            <td>\
+                ---\
+            </td>\
+            <td>\
+                ---\
             </td>\
         </tr>\
     ")
