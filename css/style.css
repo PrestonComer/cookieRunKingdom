@@ -117,6 +117,9 @@ h3.category {
 #cookieHouseTable > tbody > tr > *:last-child {
     border-right: none;
 }
+#cookieHouseTable > tbody > tr:last-child > * {
+    border-bottom: none;
+}
 
 /**-----Experience In Candys Calculator Styling----- */
 table#totalExpInCandy {

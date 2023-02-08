@@ -69,8 +69,6 @@ fetch("data/cookieHouses.json", { mode: "no-cors" })
     .then(res => res.json())
     .then(data => {
         $.each(data, function(key, item) {
-            console.log("key", key);
-            console.log("item", item);
             $("#cookieHouseTable > tbody").append("\
                 <tr>\
                     <td>" + key + "</td>\
