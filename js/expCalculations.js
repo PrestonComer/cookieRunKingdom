@@ -64,6 +64,7 @@ function calculateExperience() {
 //!-----Candy Houses-----*//
 /** 
  * Gets the information of cookie houses at each of their levels
+ * dynamically updates cookieHouseTable with the cookie house data
  */
 fetch("data/cookieHouses.json", { mode: "no-cors" })
     .then(res => res.json())
@@ -82,11 +83,26 @@ fetch("data/cookieHouses.json", { mode: "no-cors" })
 //!-----Candy Count-----*//
 /** 
  * Gets the experience values given by each candy at each research level
+ * and then creates an informational table about the increase at each level
  */
 var candy;
 fetch("data/expPerJelly.json", { mode: "no-cors" })
     .then(res => res.json())
-    .then(data => { candy = data; });
+    .then(data => {
+        candy = data;
+        $.each(candy, function(key, item) {
+            $("#tastierJellyTable > tbody").append("\
+                <tr>\
+                    <td>" + key + "</td>\
+                    <td>" + item[0] + "</td>\
+                    <td>" + item[1] + "</td>\
+                    <td>" + item[2] + "</td>\
+                    <td>" + item[3] + "</td>\
+                    <td>" + item[4] + "</td>\
+                </tr>"
+            )
+        })
+    });
 
 /** 
  * Limit the values for each level of candy to only positive numbers. Then
@@ -129,33 +145,3 @@ function calculateTotalCandy() {
             totalString = totalExperience.toLocaleString("en");
     $("#totalCandyResult").text("Experience In Candy: " + totalString);
 }
-
-//!-----Dynamically create tastier jelly table-----*//
-// console.log(candy);
-for (var item in candy[0]) {
-    console.log(item)
-};
-$.each(candy, function(key, item) {
-    $("#tastierJellyTable > tbody").append("\
-        <tr>\
-            <td>\
-                ---\
-            </td>\
-            <td>\
-                ---\
-            </td>\
-            <td>\
-                ---\
-            </td>\
-            <td>\
-                ---\
-            </td>\
-            <td>\
-                ---\
-            </td>\
-            <td>\
-                ---\
-            </td>\
-        </tr>\
-    ")
-})
