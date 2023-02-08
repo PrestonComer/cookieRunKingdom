@@ -112,6 +112,7 @@ h3.category {
 #cookieHouseTable > tbody > tr > * {
     border-right: solid black 1px;
     padding-right: 4px;
+    padding-left: 4px;
     border-bottom: solid black 1px;
 }
 #cookieHouseTable > tbody > tr > *:last-child {
@@ -119,6 +120,9 @@ h3.category {
 }
 #cookieHouseTable > tbody > tr:last-child > * {
     border-bottom: none;
+}
+#cookieHouseTable > tbody > tr {
+    text-align: center;
 }
 
 /**-----Experience In Candys Calculator Styling----- */
