@@ -27,6 +27,11 @@
                 data-target="#expCalculator"
                 class="pageLink">
                 Experience</a>
+            <!-- Link - Candy -->
+            <a href="#"
+                data-target="#candyCalculator"
+                class="pageLink">
+                Candy</a>
             <!-- Link - Skill Powder -->
             <a href="#"
                 data-target="#skillCalculator"
@@ -42,8 +47,6 @@
             <!-- Experience Calculator Page -->
             <div id="expCalculator" class="mainPage">
                 <div id="expRequired">
-                    <!-- <p>Calculate Experience Needed To Upgrade To A Specific Cookie Level</p> -->
-
                     <table>
                         <tbody>
                             <tr>
@@ -92,125 +95,125 @@
                             </tr>
                         </tbody>
                     </table>
-
-                    <!-- <div><p id="calculationResult">Experience Required: N/A</p></div> -->
                 </div>
-
-                <br>
-
-                <table id="totalExpInCandy">
-                    <tbody>
-                        <tr class="spacer"><td colspan="2"></td></tr>
-
-                        <tr>
-                            <td colspan="2">
-                                <label id="tastierJellyLabel">Tastier Star Jellies Research Level:
-                                    <select id="tastierJellyResearchLevel">
-                                        <option value="0">N/A</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="4">5</option>
-                                    </select>
-                                </label>
-                            </td>
-                        </tr>
-
-                        <tr class="spacer"><td colspan="2"></td></tr>
-
-                        <tr>
-                            <td>Level 1 Candy:</td>
-                            <td>
-                                <input type="number"
-                                    class="candyCount"
-                                    data-candyLevel=1
-                                    value="0">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Level 2 Candy:</td>
-                            <td>
-                                <input type="number"
-                                    class="candyCount"
-                                    data-candyLevel=2
-                                    value="0">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Level 3 Candy:</td>
-                            <td>
-                                <input type="number"
-                                    class="candyCount"
-                                    data-candyLevel=3
-                                    value="0">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Level 4 Candy:</td>
-                            <td>
-                                <input type="number"
-                                    class="candyCount"
-                                    data-candyLevel=4
-                                    value="0">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Level 5 Candy:</td>
-                            <td>
-                                <input type="number"
-                                    class="candyCount"
-                                    data-candyLevel=5
-                                    value="0">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Level 6 Candy:</td>
-                            <td>
-                                <input type="number"
-                                    class="candyCount"
-                                    data-candyLevel=6
-                                    value="0">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Level 7 Candy:</td>
-                            <td>
-                                <input type="number"
-                                    class="candyCount"
-                                    data-candyLevel=7
-                                    value="0">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Level 8 Candy:</td>
-                            <td>
-                                <input type="number"
-                                    class="candyCount"
-                                    data-candyLevel=8
-                                    value="0">
-                            </td>
-                        </tr>
-
-                        <tr class="spacer"><td colspan="2"></td></tr>
-
-                        <tr>
-                            <td colspan="2">
-                                <p id="totalCandyResult">Experience In Candy: N/A</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <!-- Experience Page End -->
+                <!-- Experience To Level X Required Page End -->
             </div>
+
+            <div id="candyCalculator" class="mainPage">
+                <div id="expInCandy">
+                    <table id="totalExpInCandy">
+                        <tbody>
+                            <tr class="spacer"><td colspan="2"></td></tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <label id="tastierJellyLabel">Tastier Star Jellies Research Level:
+                                        <select id="tastierJellyResearchLevel">
+                                            <option value="0">N/A</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </label>
+                                </td>
+                            </tr>
+
+                            <tr class="spacer"><td colspan="2"></td></tr>
+
+                            <tr>
+                                <td>Level 1 Candy:</td>
+                                <td>
+                                    <input type="number"
+                                        class="candyCount"
+                                        data-candyLevel=1
+                                        value="0">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Level 2 Candy:</td>
+                                <td>
+                                    <input type="number"
+                                        class="candyCount"
+                                        data-candyLevel=2
+                                        value="0">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Level 3 Candy:</td>
+                                <td>
+                                    <input type="number"
+                                        class="candyCount"
+                                        data-candyLevel=3
+                                        value="0">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Level 4 Candy:</td>
+                                <td>
+                                    <input type="number"
+                                        class="candyCount"
+                                        data-candyLevel=4
+                                        value="0">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Level 5 Candy:</td>
+                                <td>
+                                    <input type="number"
+                                        class="candyCount"
+                                        data-candyLevel=5
+                                        value="0">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Level 6 Candy:</td>
+                                <td>
+                                    <input type="number"
+                                        class="candyCount"
+                                        data-candyLevel=6
+                                        value="0">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Level 7 Candy:</td>
+                                <td>
+                                    <input type="number"
+                                        class="candyCount"
+                                        data-candyLevel=7
+                                        value="0">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Level 8 Candy:</td>
+                                <td>
+                                    <input type="number"
+                                        class="candyCount"
+                                        data-candyLevel=8
+                                        value="0">
+                                </td>
+                            </tr>
+
+                            <tr class="spacer"><td colspan="2"></td></tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <p id="totalCandyResult">Experience In Candy: N/A</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Experience In Candy Page End -->
         </main>
     </div>
 
