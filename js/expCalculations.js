@@ -68,7 +68,7 @@ function calculateExperience() {
 var cookieHouse;
 fetch("data/cookieHouses.json", { mode: "no-cors" })
     .then(res => res.json())
-    .then(data => { cookieHouse = $.parseJSON(data); });
+    .then(data => { cookieHouse = data; });
 
 $.each(cookieHouse, function(key, item) {
     $("#cookieHouseTable > tbody").append("\
