@@ -70,7 +70,8 @@ fetch("data/cookieHouses.json", { mode: "no-cors" })
     .then(res => res.json())
     .then(data => { cookieHouse = data; });
 
-    console.log("start")
+    console.log("start");
+    console.log("cookieHouse", cookieHouse);
     $.each(cookieHouse.data, function(key, item) {
         console.log("key", key);
         console.log("item", item);
