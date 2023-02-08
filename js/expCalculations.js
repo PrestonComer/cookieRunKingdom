@@ -1,4 +1,4 @@
-//*-----Experience Needed Calculation-----*//
+//!-----Experience Needed Calculation-----*//
 /** 
  * Gets the experience values needed at each cookie level and saves it in 'exp'
  */
@@ -61,7 +61,26 @@ function calculateExperience() {
     $("#calculationResult").text("Experience Required: " + expNeeded.toLocaleString("en"));
 }
 
-//*-----Candy Count-----*//
+//!-----Candy Houses-----*//
+/** 
+ * Gets the information of cookie houses at each of their levels
+ */
+var cookieHouse;
+fetch("data/cookieHouses.json", { mode: "no-cors" })
+    .then(res => res.json())
+    .then(data => { cookieHouse = data; });
+
+cookieHouse.each(function() {
+    $("#cookieHouseTable > tbody").append(
+        <tr>
+            <td>{this}</td>
+            <td>{this[0]}</td>
+            <td>{this[1]}</td>
+        </tr>
+    )
+})
+
+//!-----Candy Count-----*//
 /** 
  * Gets the experience values given by each candy at each research level
  */
