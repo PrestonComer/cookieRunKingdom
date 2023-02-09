@@ -212,7 +212,7 @@ table#tastierJellyBonusTable > tbody > tr > td:first-child {
     text-align: end;
 }
 #skillCalculator > table > tbody > tr:first-child > td,
-#skillPowderHeader > td {
+.skillPowderHeader > td {
     border: solid black 1px;
     padding: 3px;
 }
