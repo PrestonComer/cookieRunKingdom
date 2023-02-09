@@ -183,3 +183,17 @@ table#totalExpInCandy > tbody > tr > td:nth-child(2) > input {
     margin: 3%;
     margin-top: 0;
 }
+/**-----Tastier Jelly Bonus Table Styling-----*/
+table#tastierJellyBonusTable {
+    border: solid black 1px;
+    border-collapse: collapse;
+    float: left;
+    margin: 3%;
+    text-align: center;
+}
+table#tastierJellyBonusTable > tbody > tr > th {
+    border: solid black 1px;
+}
+table#tastierJellyBonusTabl > tbody > tr > td:first-child {
+    border-right: solid black 1px;
+}
