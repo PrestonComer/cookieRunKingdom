@@ -202,10 +202,19 @@ table#tastierJellyBonusTable > tbody > tr > td:first-child {
 }
 
 /**-----Skill Powder Calculator Styling-----*/
+#skillCalculator > table {
+    border-collapse: collapse;
+    margin: 3%;
+    text-align: center;
+}
+#skillCalculator > table input {
+    border: none;
+    text-align: end;
+}
 #skillCalculator > table > tbody > tr:first-child > td,
-#currentSkillPowderHeader > td,
-#neededSkillPowderHeader > td {
+#skillPowderHeader > td {
     border: solid black 1px;
+    padding: 3px;
 }
 #skillCalculator > table > tbody > tr:not(.spacer) > td:first-child {
     border-left: solid black 1px;
