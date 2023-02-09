@@ -209,7 +209,6 @@ table#tastierJellyBonusTable > tbody > tr > td:first-child {
 }
 #skillCalculator > table input {
     border: none;
-    text-align: end;
 }
 #skillCalculator > table > tbody > tr:first-child > td,
 .skillPowderHeader > td {
@@ -221,6 +220,9 @@ table#tastierJellyBonusTable > tbody > tr > td:first-child {
 }
 #skillCalculator > table > tbody > tr:not(.spacer) > td:last-child {
     border-right: solid black 1px;
+    font-family: tahoma;
+    font-size: 13.3333px;
+    padding-right: 18px
 }
 .skillPowderFinalItem > td {
     border-bottom: solid black 1px;
