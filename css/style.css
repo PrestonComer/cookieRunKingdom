@@ -141,8 +141,9 @@ h3.category {
 /**-----Experience In Candys Calculator Styling----- */
 table#totalExpInCandy {
     border: solid black 1px;
-    padding: 4px;
+    float: inline-start;
     margin: 3%;
+    padding: 4px;
 }
 #tastierJellyLabel {
     border: solid black 1px;
@@ -155,4 +156,30 @@ table#totalExpInCandy {
 }
 table#totalExpInCandy > tbody > tr > td:nth-child(2) > input {
     float: right;
+}
+
+/**-----Tastier Jelly Table Styling-----*/
+#tastierJellyTable {
+    border: solid black 1px;
+    border-collapse: collapse;
+    float: left;
+    margin: 3%;
+    text-align: center;
+}
+#tastierJellyTable > tbody > tr:first-child > th:first-child,
+#tastierJellyTable > tbody > tr > td:first-child {
+    border: solid black 1px;
+}
+#tastierJellyTable > tbody > tr > td {
+    border-bottom: solid black 1px;
+}
+#tastierJellyTable > tbody > tr > td {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+/**-----Tastier Jelly Text Styling-----*/
+#tastierJellyText {
+    display: inline-block;
+    margin: 3%;
+    margin-top: 0;
 }
