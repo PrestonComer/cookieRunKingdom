@@ -202,12 +202,12 @@ table#tastierJellyBonusTable > tbody > tr > td:first-child {
 }
 
 /**-----Skill Powder Calculator Styling-----*/
-#skillCalculator > table {
+#skillPowderCalculator {
     border-collapse: collapse;
     margin: 3%;
     text-align: center;
 }
-#skillCalculator > table input {
+#skillPowderCalculator input {
     border: none;
     text-align: center;
 }
@@ -215,10 +215,10 @@ table#tastierJellyBonusTable > tbody > tr > td:first-child {
     border: solid black 1px;
     padding: 3px;
 }
-#skillCalculator > table > tbody > tr:not(.spacer) > td:first-child {
+#skillPowderCalculator > tbody > tr:not(.spacer) > td:first-child {
     border-left: solid black 1px;
 }
-#skillCalculator > table > tbody > tr:not(.spacer) > td:last-child {
+#skillPowderCalculator  > tbody > tr:not(.spacer) > td:last-child {
     border-right: solid black 1px;
     font-family: tahoma;
     font-size: 13.3333px;
@@ -229,4 +229,11 @@ table#tastierJellyBonusTable > tbody > tr > td:first-child {
 }
 td.simulateNumInput {
     padding-right: 19px;
+}
+/**-----Skill Powder Table Styling-----*/
+#skillPowderTable {
+    border-collapse: collapse;
+    margin: 3%;
+    text-align: center;
+    border: solid black 1px;
 }

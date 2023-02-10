@@ -350,7 +350,7 @@
 
             <!-- Skill Powder Pag Start -->
             <div id="skillCalculator" class="mainPage">
-                <table>
+                <table id="skillPowderCalculator">
                     <tbody>
                         <tr class="skillPowderHeader">
                             <td>Cookie's Current Skill Level</td>
@@ -371,7 +371,7 @@
                                 <input type="number"
                                     id="endingSkillLevel"
                                     class="cookieSkillInfo"
-                                    value="1">
+                                    value="70">
                             </td>
                         </tr>
 
@@ -439,6 +439,16 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <table id="skillPowderTable">
+                    <tbody>
+                        <tr>
+                            <th>Level</th>
+                            <th colspan="2">Powder Needed</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Skill Powder Page End -->
             </div>
         </main>
     </div>
@@ -447,5 +457,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/pageChange.js"></script>
     <script src="js/expCalculations.js"></script>
+    <script src="js/powderCalculators.js"></script>
 </body>
 </html>

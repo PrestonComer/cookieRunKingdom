@@ -1,4 +1,4 @@
-//!-----Experience Needed Calculation-----*//
+//!-----Experience Needed Calculation-----!//
 /** 
  * Gets the experience values needed at each cookie level and saves it in 'exp'
  */
@@ -61,7 +61,7 @@ function calculateExperience() {
     $("#calculationResult").text("Experience Required: " + expNeeded.toLocaleString("en"));
 }
 
-//!-----Candy Houses-----*//
+//!-----Candy Houses-----!//
 /** 
  * Gets the information of cookie houses at each of their levels
  * dynamically updates cookieHouseTable with the cookie house data
@@ -80,7 +80,7 @@ fetch("data/cookieHouses.json", { mode: "no-cors" })
         });
     });
 
-//!-----Candy Count-----*//
+//!-----Candy Count-----!//
 /** 
  * Gets the experience values given by each candy at each research level
  * and then creates an informational table about the increase at each level
@@ -135,7 +135,7 @@ function calculateTotalCandy() {
     $("#totalCandyResult").text("Experience In Candy: " + totalString);
 }
 
-//!-----Tastier Jelly Research effect on candy exp----*//
+//!-----Tastier Jelly Research effect on candy exp----!//
 /** 
  * Dynamically fill in a table containing the information about the exp of each 
  * level of candy at each level of tastier jelly research
