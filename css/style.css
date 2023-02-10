@@ -246,7 +246,7 @@ td.simulateNumInput {
 #skillPowderTable > tbody > tr > td:first-child {
     border-right: solid black 1px;
 }
-#skillPowderTable > tbody > tr:not(:first-child) > td:nth-child(3) {
+#skillPowderTable > tbody > tr:not(:first-child) > td:nth-child(2) {
     text-transform: capitalize;
 }
 /**-----Skill Powder Informational text----- */
