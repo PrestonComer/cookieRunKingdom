@@ -15,11 +15,11 @@ fetch("data/skillPowder.json", {mode: "no-cors"})
 function createSkillPowderTable() {
     var sT = $("#skillPowderTable > tbody");
     $.each(powderInfo, function(key, item) {
+        combindItem = item[1] + " " + item[2];
         sT.append("\
             <tr>\
                 <td>" + key + "</td>\
-                <td>" + item[1] + "</td>\
-                <td>" + item[2] + "</td>\
+                <td>" + combindItem + "</td>\
             </tr>"
         );
     })
