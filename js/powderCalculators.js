@@ -15,11 +15,8 @@ fetch("data/skillPowder.json", {mode: "no-cors"})
 function createSkillPowderTable() {
     $.each(powderInfo, function(key, item) {
         combindItem = item[1] + " " + item[2];
-        var x = "#skillPowderTable > tbody > tr > #" + item[2] + "Powder > table > tbody";
-        console.log(x)
-        console.log($("#skillPowderTable > tbody > tr > #" + item[2] + "Powder > table > tbody"))
-        console.log(item[2])
-        $("#skillPowderTable > tbody > tr > #" + item[2] + "Powder > table > tbody").append("\
+
+        $("#skillPowderTable > tbody > tr > td > #" + item[2] + "Powder > table > tbody").append("\
             <tr>\
                 <td>" + key + "</td>\
                 <td>" + combindItem + "</td>\
