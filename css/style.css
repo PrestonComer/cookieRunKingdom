@@ -233,20 +233,25 @@ td.simulateNumInput {
 }
 /**-----Skill Powder Table Styling-----*/
 #skillPowderTable {
-    border: solid black 1px;
-    border-collapse: collapse;
     float: left;
     margin: 3%;
     text-align: center;
 }
-#skillPowderTable > tbody > tr:first-child > th {
+#skillPowderTable details > summary {
+    text-decoration: underline;
+    padding: 4px;
+}
+#skillPowderTable details > table {
+    border: solid black 1px;
+    border-collapse: collapse;
+    margin: 4px;
+}
+#skillPowderTable details > table tr:first-child > th {
     border: solid black 1px;
     padding: 4px;
 }
-#skillPowderTable > tbody > tr > td:first-child {
+#skillPowderTable details > table > tbody > tr > td {
     border-right: solid black 1px;
-}
-#skillPowderTable > tbody > tr:not(:first-child) > td:nth-child(2) {
     text-transform: capitalize;
 }
 /**-----Skill Powder Informational text----- */
