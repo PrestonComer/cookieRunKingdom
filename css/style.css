@@ -246,6 +246,9 @@ td.simulateNumInput {
     border-collapse: collapse;
     margin: 4px;
 }
+#skillPowderTable > tbody > tr {
+    vertical-align: top;
+}
 #skillPowderTable details > table tr:first-child > th {
     border: solid black 1px;
     padding: 4px;
