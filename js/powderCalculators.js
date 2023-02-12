@@ -21,7 +21,7 @@ function createSkillPowderTable() {
         if (key > 24) {
             desiredTable = "2";
 
-            if (key > 48) {
+            if (key > 47) {
                 desiredTable = "3";
             }
         }
