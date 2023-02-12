@@ -18,9 +18,9 @@ function createSkillPowderTable() {
     $.each(powderInfo, function(key, item) {
         combindItem = item[1] + " " + item[2];
 
-        if (key > 25 && key <= 50) {
+        if (key > 24 && key <= 48) {
             desiredTable = "2";
-        } else if (key > 50) {
+        } else {
             desiredTable = "3";
         }
 
