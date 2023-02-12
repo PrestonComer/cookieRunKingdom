@@ -20,8 +20,10 @@ function createSkillPowderTable() {
 
         if (key > 24 && key <= 48) {
             desiredTable = "2";
-        } else {
-            desiredTable = "3";
+
+            if (key > 48) {
+                desiredTable = "3";
+            }
         }
 
         $("#skillPowderTable details#powderTable" + desiredTable + " > table > tbody").append("\
