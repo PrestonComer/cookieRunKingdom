@@ -26,7 +26,7 @@ function createSkillPowderTable() {
             }
         }
 
-        $("#skillPowderTable details#powderTable" + desiredTable + " > table > tbody").append("\
+        $("#skillPowderTable td#powderTable" + desiredTable + " > table > tbody").append("\
             <tr>\
                 <td>" + key + "</td>\
                 <td>" + combindItem + "</td>\

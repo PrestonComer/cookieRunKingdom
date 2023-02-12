@@ -237,11 +237,15 @@ td.simulateNumInput {
     margin: 3%;
     text-align: center;
 }
-#skillPowderTable details > summary {
-    text-decoration: underline;
+#skillPowderTable td > summary {
+    display: list-item;
+    list-style: disclosure-closed inside;
+    list-style-type: disclosure-open;
     padding: 4px;
+    text-decoration: underline;
+    text-align: center;
 }
-#skillPowderTable details > table {
+#skillPowderTable td > table {
     border: solid black 1px;
     border-collapse: collapse;
     margin: 4px;
@@ -249,11 +253,11 @@ td.simulateNumInput {
 #skillPowderTable > tbody > tr {
     vertical-align: top;
 }
-#skillPowderTable details > table tr:first-child > th {
+#skillPowderTable td > table tr:first-child > th {
     border: solid black 1px;
     padding: 4px;
 }
-#skillPowderTable details > table > tbody > tr > td {
+#skillPowderTable td > table > tbody > tr > td {
     border-right: solid black 1px;
     text-transform: capitalize;
 }
