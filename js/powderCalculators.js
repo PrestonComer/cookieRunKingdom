@@ -13,10 +13,18 @@ fetch("data/skillPowder.json", {mode: "no-cors"})
  * from the prior level to itself
  */
 function createSkillPowderTable() {
+    var desiredTable = "1";
+
     $.each(powderInfo, function(key, item) {
         combindItem = item[1] + " " + item[2];
 
-        $("#skillPowderTable > tbody > tr > td > #" + item[2] + "Powder > table > tbody").append("\
+        if (key > 25) {
+            desiredTable = "2";
+        } else if (key > 50) {
+            desiredTable = "3";
+        }
+
+        $("#skillPowderTable details#powderTable" + desiredTable + " > table > tbody").append("\
             <tr>\
                 <td>" + key + "</td>\
                 <td>" + combindItem + "</td>\
