@@ -204,9 +204,11 @@ table#tastierJellyBonusTable > tbody > tr > td:first-child {
 /**-----Skill Powder Calculator Styling-----*/
 #skillPowderCalculator {
     border-collapse: collapse;
-    float: left;
     margin: 3%;
     margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 274px;
     text-align: center;
 }
 #skillPowderCalculator input {
@@ -234,8 +236,10 @@ td.simulateNumInput {
 }
 /**-----Skill Powder Table Styling-----*/
 #skillPowderTable {
-    float: left;
     margin: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 435px;
     text-align: center;
 }
 #skillPowderTable td > summary {
