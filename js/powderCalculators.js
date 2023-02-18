@@ -65,6 +65,7 @@ function calculatePowder() {
     $.each(powderInfo, function(key, item) {
         if ($("#startingSkillLevel").val() <= key) {
             if ($("#endingSkillLevel").val() >= key) {
+                console.log(key + " : " + item);
                 var slot;
                 if (item[2] == "regular") {
                     slot = 0;
@@ -76,12 +77,12 @@ function calculatePowder() {
 
                 powderNeed[slot][1] += item[1];
 
-                console.log("slot: " + slot);
-                console.log("item[2]: " + item[2]);
-                console.log(powderNeed[0]);
-                console.log(powderNeed[1]);
-                console.log(powderNeed[2]);
-                console.log("\n");
+                // console.log("slot: " + slot);
+                // console.log("item: " + item);
+                // console.log(powderNeed[0]);
+                // console.log(powderNeed[1]);
+                // console.log(powderNeed[2]);
+                // console.log("\n");
             }
         }
     })
