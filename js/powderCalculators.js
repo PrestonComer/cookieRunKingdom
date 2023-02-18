@@ -61,31 +61,41 @@ function calculatePowder() {
         ["pristinePowderNeed", -$("#pristinePowderHave").val()]
     ];
 
-    // calculate the max powder needed
-    $.each(powderInfo, function(key, item) {
-        if (parseInt($("#startingSkillLevel").val()) <= parseInt(key)) {
-            if (parseInt($("#endingSkillLevel").val()) >= parseInt(key)) {
-                console.log(key + " : " + item);
-                var slot;
-                if (item[2] == "regular") {
-                    slot = 0;
-                } else if (item[2] == "refined") {
-                    slot = 1;
-                } else if (item[2] == "pristine") {
-                    slot = 2;
-                }
-
-                powderNeed[slot][1] += item[1];
-
-                // console.log("slot: " + slot);
-                // console.log("item: " + item);
-                // console.log(powderNeed[0]);
-                // console.log(powderNeed[1]);
-                // console.log(powderNeed[2]);
-                // console.log("\n");
+    for (
+        var i = $("#startingSkillLevel").val();
+        i < $("#endingSkillLevel").val();
+        i++
+        ) {
+            var powderType = powderInfo[i][2];
+            var powderCount = powderInfo[i][1];
+            if (powderType == "regular") {
+                powderNeed[0][1] += powderCount;
+            } else if (powderType == "refined") {
+                powderNeed[1][1] += powderCount;
+            } else if (powderType == "pristine") {
+                powderNeed[2][1] += powderCount;
             }
         }
-    })
+
+
+    // calculate the max powder needed
+    // $.each(powderInfo, function(key, item) {
+    //     if (parseInt($("#startingSkillLevel").val()) <= parseInt(key)) {
+    //         if (parseInt($("#endingSkillLevel").val()) >= parseInt(key)) {
+    //             console.log(key + " : " + item);
+    //             var slot;
+    //             if (item[2] == "regular") {
+    //                 slot = 0;
+    //             } else if (item[2] == "refined") {
+    //                 slot = 1;
+    //             } else if (item[2] == "pristine") {
+    //                 slot = 2;
+    //             }
+
+    //             powderNeed[slot][1] += item[1];
+    //         }
+    //     }
+    // })
 
     $.each(powderNeed, function() {
         $("#"+this[0]).text((this[1] < 0) ? 0 : this[1]);
