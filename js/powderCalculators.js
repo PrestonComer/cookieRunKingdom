@@ -65,7 +65,7 @@ function calculatePowder() {
     $.each(powderInfo, function(key, item) {
         if ($("#startingSkillLevel").val() <= key && $("#endingSkillLevel").val() >= key) {
             // if item[2] is basic then 0 else if its refined then 1 else its 2
-            var slot = (item[2] == "regular") ? 0 :(item[2] == "refined") ? 1 : 2;
+            var slot = (item[3] == "regular") ? 0 :(item[3] == "refined") ? 1 : 2;
 
             powderNeed[slot][1] += item[2];
         }
