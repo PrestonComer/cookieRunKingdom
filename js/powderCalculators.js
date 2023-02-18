@@ -78,7 +78,7 @@ function calculatePowder() {
         }
     })
 
-    $.each(powderNeed, function(x) {
-        console.log(this);
+    $.each(powderNeed, function() {
+        $(this[0]).text(this[1]);
     })
 }
