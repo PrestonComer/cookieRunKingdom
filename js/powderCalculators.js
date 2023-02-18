@@ -64,16 +64,16 @@ function calculatePowder() {
     ];
 
     for (var i =  startLvl + 1; i < endLvl + 1; i++) {
-            console.log(i + " : " + powderInfo[i]);
-            // var powderType = powderInfo[i][2];
-            // var powderCount = powderInfo[i][1];
-            // if (powderType == "regular") {
-            //     powderNeed[0][1] += powderCount;
-            // } else if (powderType == "refined") {
-            //     powderNeed[1][1] += powderCount;
-            // } else if (powderType == "pristine") {
-            //     powderNeed[2][1] += powderCount;
-            // }
+            // console.log(i + " : " + powderInfo[i]);
+            var powderType = powderInfo[i][2];
+            var powderCount = powderInfo[i][1];
+            if (powderType == "regular") {
+                powderNeed[0][1] += powderCount;
+            } else if (powderType == "refined") {
+                powderNeed[1][1] += powderCount;
+            } else if (powderType == "pristine") {
+                powderNeed[2][1] += powderCount;
+            }
         }
 
 
