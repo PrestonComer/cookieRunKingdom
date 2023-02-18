@@ -66,15 +66,15 @@ function calculatePowder() {
         if ($("#startingSkillLevel").val() <= key && $("#endingSkillLevel").val() >= key) {
             
             var slot;
-            if (item[3] == "regular") {
+            if (item[2] == "regular") {
                 slot = 0;
-            } else if (item[3] == "refined") {
+            } else if (item[2] == "refined") {
                 slot = 1;
             } else {
                 slot = 2;
             }
 
-            powderNeed[slot][1] += item[2];
+            powderNeed[slot][1] += item[1];
             console.log(powderNeed, slot);
         }
     })
