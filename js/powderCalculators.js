@@ -40,7 +40,7 @@ function createSkillPowderTable() {
  * Put bounds on the powder number input while also updating the 
  * powder needed.
  */
-$("#skillPowderCalculator > input").on("change", function() {
+$("#skillPowderCalculator input").on("change", function(this) {
     if (this.value < 0) { this.value = 0; }
 
     calculatePowder();
