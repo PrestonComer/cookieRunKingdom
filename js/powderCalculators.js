@@ -61,11 +61,10 @@ function calculatePowder() {
         ["pristinePowderNeed", -$("#pristinePowderHave").val()]
     ];
 
-    for (
-        var i = parseInt($("#startingSkillLevel").val() + 1);
-        i < parseInt($("#endingSkillLevel").val());
-        i++
-        ) {
+    for (var i = $("#startingSkillLevel").val() + 1;
+        i < $("#endingSkillLevel").val();
+        i++) {
+            console.log(powderInfo[i]);
             var powderType = powderInfo[i][2];
             var powderCount = powderInfo[i][1];
             if (powderType == "regular") {
