@@ -75,6 +75,7 @@ function calculatePowder() {
             }
 
             powderNeed[slot][1] += item[2];
+            console.log(powderNeed, slot);
         }
     })
 
