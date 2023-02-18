@@ -47,6 +47,7 @@ $("#skillPowderCalculator input").on("change", function() {
     var endLvl = $("#endingSkillLevel");
     if (startLvl.val() >= endLvl.val()) { startLvl.val(endLvl.val() - 1)}
     if (startLvl.val() < 1) { startLvl.val(1); }
+    if (endLvl.val() < 2) { endLvl.val(2); }
     if (startLvl.val() > 70) { startLvl.val(70); }
     if (endLvl.val() > 70) { endLvl.val(70); }
 
@@ -62,9 +63,8 @@ function calculatePowder() {
 
     // calculate the max powder needed
     $.each(powderInfo, function(key, item) {
-        console.log("key: " + key + "\n" + "item: " + item);
-        if ($("#startingSkillLevel") < key &&
-            $("#endingSkillLevel") > key) {
+        if ($("#startingSkillLevel") < key && $("#endingSkillLevel") > key) {
+            console.log("key: " + key + "\n" + "item: " + item);
             // if item[2] is basic then 0 else if its refined then 1 else its 2
             var slot = (item[2] == "basic") ? 0 :(item[2] == "refined") ? 1 : 2;
 
@@ -72,7 +72,7 @@ function calculatePowder() {
         }
     })
 
-    $.each(powderNeed, function(target, need) {
+    $.each(powderNeed[0], function(target, need) {
         target.text = (need < 0) ? 0 : need;
     })
 }
