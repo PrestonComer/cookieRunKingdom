@@ -45,10 +45,10 @@ $("#skillPowderCalculator input").on("change", function() {
 
     var startLvl = $("#startingSkillLevel");
     var endLvl = $("#endingSkillLevel");
+    if (startLvl.val() >= endLvl.val()) { startLvl.val(endLvl.val() - 1)}
     if (startLvl.val() < 1) { startLvl.val(1); }
     if (startLvl.val() > 70) { startLvl.val(70); }
     if (endLvl.val() > 70) { endLvl.val(70); }
-    if (startLvl.val() >= endLvl.val()) { startLvl.val(endLvl.val() - 1)}
 
     calculatePowder();
 })
@@ -72,6 +72,6 @@ function calculatePowder() {
     })
 
     $.each(powderNeed, function(target, need) {
-        target.value = (need < 0) ? 0 : need;
+        target.text = (need < 0) ? 0 : need;
     })
 }
