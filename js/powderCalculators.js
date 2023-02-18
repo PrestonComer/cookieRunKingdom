@@ -72,6 +72,7 @@ function calculatePowder() {
         }
     })
 
+    console.log(powderNeed);
     $.each(powderNeed[0], function(target, need) {
         console.log($(target), $(target).text(), target);
         $(target).text((need < 0) ? 0 : need);
