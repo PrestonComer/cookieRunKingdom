@@ -63,8 +63,8 @@ function calculatePowder() {
 
     // calculate the max powder needed
     $.each(powderInfo, function(key, item) {
-        if (parseInt($("#startingSkillLevel").val()) <= key) {
-            if (parseInt($("#endingSkillLevel").val()) >= key) {
+        if (parseInt($("#startingSkillLevel").val()) <= parseInt(key)) {
+            if (parseInt($("#endingSkillLevel").val()) >= parseInt(key)) {
                 console.log(key + " : " + item);
                 var slot;
                 if (item[2] == "regular") {
