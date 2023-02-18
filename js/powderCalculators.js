@@ -62,7 +62,7 @@ function calculatePowder() {
     ];
 
     for (
-        var i = parseInt($("#startingSkillLevel").val());
+        var i = parseInt($("#startingSkillLevel").val() + 1);
         i < parseInt($("#endingSkillLevel").val());
         i++
         ) {
