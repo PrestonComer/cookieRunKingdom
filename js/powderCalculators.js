@@ -5,7 +5,7 @@ fetch("data/skillPowder.json", {mode: "no-cors"})
     .then(data => {
         powderInfo = data;
         createSkillPowderTable();
-        calculatePowder();
+        // calculatePowder();
     });
 
 /** 
