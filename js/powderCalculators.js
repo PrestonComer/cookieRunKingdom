@@ -62,8 +62,8 @@ function calculatePowder() {
     ];
 
     for (
-        var i = $("#startingSkillLevel").val();
-        i < $("#endingSkillLevel").val();
+        var i = parseInt($("#startingSkillLevel").val());
+        i < parseInt($("#endingSkillLevel").val());
         i++
         ) {
             var powderType = powderInfo[i][2];
