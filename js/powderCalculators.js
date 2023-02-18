@@ -56,9 +56,9 @@ $("#skillPowderCalculator input").on("change", function() {
 
 function calculatePowder() {
     var powderNeed = [
-        [$("#basicPowderNeed"), -$("#basicPowderHave").val()],
-        [$("#refinedPowderNeed"), -$("#refinedPowderHave").val()],
-        [$("#pristinePowderNeed"), -$("#pristinePowderHave").val()]
+        ["#basicPowderNeed", -$("#basicPowderHave").val()],
+        ["#refinedPowderNeed", -$("#refinedPowderHave").val()],
+        ["#pristinePowderNeed", -$("#pristinePowderHave").val()]
     ];
 
     // calculate the max powder needed
@@ -73,7 +73,7 @@ function calculatePowder() {
     })
 
     $.each(powderNeed, function(target, need) {
-        console.log(target, target.text)
-        target.text((need < 0) ? 0 : need);
+        console.log($(target), $(target).text())
+        $(target).text((need < 0) ? 0 : need);
     })
 }
