@@ -55,15 +55,15 @@ $("#skillPowderCalculator input").on("change", function() {
 })
 
 function calculatePowder() {
+    var startLvl = parseInt($("#startingSkillLevel").val());
+    var endLvl = parseInt($("#endingSkillLevel").val());
     var powderNeed = [
         ["basicPowderNeed", -$("#basicPowderHave").val()],
         ["refinedPowderNeed", -$("#refinedPowderHave").val()],
         ["pristinePowderNeed", -$("#pristinePowderHave").val()]
     ];
 
-    for (var i = $("#startingSkillLevel").val() + 1;
-        i < $("#endingSkillLevel").val();
-        i++) {
+    for (var i =  startLvl + 1; i < endLvl + 1; i++) {
             console.log(i + " : " + powderInfo[i]);
             // var powderType = powderInfo[i][2];
             // var powderCount = powderInfo[i][1];
