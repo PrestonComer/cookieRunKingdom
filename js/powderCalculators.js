@@ -36,13 +36,13 @@ function createSkillPowderTable() {
     })
 }
 
-$("#startingSkillPowder").on("change", function() {
+$("#startingSkillLevel").on("change", function() {
     var curVal = $(this).val();
     if (curVal < 1) { $(this).val(1); }
     if (curVal > 70) { $(this).val(70); }
     calculatePowder();
 })
-$("#endingSkillPowder").on("change", function() {
+$("#endingSkillLevel").on("change", function() {
     var curVal = $(this).val();
     if (curVal < 2) { $(this).val(2); }
     if (curVal > 70) { $(this).val(70); }
