@@ -36,12 +36,21 @@ function createSkillPowderTable() {
     })
 }
 
+/** 
+ * Put bounds on what level the cookie is starting at and on change update
+ * the amount of skill powder needed
+ */
 $("#startingSkillLevel").on("change", function() {
     var curVal = $(this).val();
     if (curVal < 1) { $(this).val(1); }
     if (curVal > 70) { $(this).val(70); }
     calculatePowder();
 })
+
+/** 
+ * Put bounds on what level the cookie you want to end at and on change
+ * update the amount of skill powder needed
+ */
 $("#endingSkillLevel").on("change", function() {
     var curVal = $(this).val();
     if (curVal < 2) { $(this).val(2); }
@@ -58,6 +67,10 @@ $("#skillPowderCalculator tr:not(.skillPowderHeader) input").on("change", functi
     calculatePowder();
 })
 
+/** 
+ * Go through all the skill levels needed to go from starting cookie skill level 
+ * to ending skill level summing them.
+ */
 function calculatePowder() {
     var startLvl = parseInt($("#startingSkillLevel").val());
     var endLvl = parseInt($("#endingSkillLevel").val());
