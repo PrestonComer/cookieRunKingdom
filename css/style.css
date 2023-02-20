@@ -291,6 +291,9 @@ td.simulateNumInput {
     aside.sidebar__sidebar {
         display: none;
     }
+    #biggerDeviceTitle {
+        display: none;
+    }
     .top-nav {
         display: flex;
         flex-direction: row;

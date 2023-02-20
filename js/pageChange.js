@@ -25,6 +25,7 @@ $('aside.sidebar__sidebar > a').on("click", function() {
 $("input#menu-toggle").on("change", function() {
     if ($("aside.sidebar__sidebar").hasClass("isMobileSidebar")) {
         $("aside.sidebar__sidebar").removeClass("isMobileSidebar");
+        $("#biggerDeviceTitle").prop("display", "block");
     } else {
         $("aside.sidebar__sidebar").addClass("isMobileSidebar");
     }
