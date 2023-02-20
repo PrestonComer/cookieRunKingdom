@@ -279,7 +279,7 @@ td.simulateNumInput {
 
 
 /**-----Home Button on bigger devices-----*/
-.menu-button-container {
+.top-nav {
     display: none;
 }
 
@@ -296,12 +296,11 @@ td.simulateNumInput {
     }
     .top-nav {
         display: flex;
+        border-bottom: solid black 4px;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        background-color: #00BAF0;
-        background: linear-gradient(to left, #f46b45, #eea849);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-color: rgb(66, 64, 64);
         color: #FFF;
         height: 50px;
         padding: 1em;
@@ -360,5 +359,13 @@ td.simulateNumInput {
         display: block;
         width: 100%;
         margin-right: 0px;
+    }
+
+    .sidebar__sidebar {
+        border-right: none;
+    }
+    .sidebar__sidebar > * {
+        width: fit-content;
+        margin: auto;
     }
 }

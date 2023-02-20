@@ -20,7 +20,8 @@ $('aside.sidebar__sidebar > a').on("click", function() {
 })
 
 /** 
- * 
+ * When a decision in the sidebar menu is chosen then remove the menu
+ * from the screen
  */
 $("input#menu-toggle").on("change", function() {
     if ($("aside.sidebar__sidebar").hasClass("isMobileSidebar")) {
