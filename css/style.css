@@ -274,7 +274,7 @@ td.simulateNumInput {
 
 
 /**-----Home Button on bigger devices-----*/
-#homeButton {
+#smallerDeviceHeader {
     display: none;
 }
 
@@ -283,11 +283,14 @@ td.simulateNumInput {
     .sidebar__sidebar {
         display: none;
     }
+    #smallerDeviceHeader {
+        display: block;
+        border-bottom: solid black 1px;
+    }
     #homeButton {
         display: block;
         padding: 2em;
-        width: 18px;
-        float: right;
-        z-index: 999;
+        height: 18px;
+        position: absolute;
     }
 }
