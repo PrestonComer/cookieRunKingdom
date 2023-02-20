@@ -1,9 +1,7 @@
 /**-----Initial Settings----- */
-@import url(https://fonts.googleapis.com/css?family=Raleway);
 /* prevent default margins messing up anything */
 * { 
     margin: 0;
-    font-family: "Raleway";
     box-sizing: border-box;
 }
 /* pull the body of page down to the bottom of the page */
@@ -307,7 +305,6 @@ td.simulateNumInput {
       }
 
     .menu-button-container {
-        display: none;
         height: 100%;
         width: 30px;
         cursor: pointer;
