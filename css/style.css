@@ -266,8 +266,28 @@ td.simulateNumInput {
     border-right: solid black 1px;
     text-transform: capitalize;
 }
-/**-----Skill Powder Informational text----- */
+/**-----Skill Powder Informational text-----*/
 #skillPowderCalculator > tbody > tr > td#skillPowderText {
     border: none;
     width: 0px;
+}
+
+
+/**-----Home Button on bigger devices-----*/
+#homeButton {
+    display: none;
+}
+
+/**-----Styling on smaller devices-----*/
+@media screen and (max-width: 651px) {
+    .sidebar__sidebar {
+        display: none;
+    }
+    #homeButton {
+        display: block;
+        padding: 2em;
+        width: 18px;
+        float: right;
+        z-index: 999;
+    }
 }
