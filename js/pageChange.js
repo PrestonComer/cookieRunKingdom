@@ -16,7 +16,7 @@ $('aside.sidebar__sidebar > a').on("click", function() {
     // show the page of the link clicked on
     $(this.dataset.target).show();
     // reset the checkbox header on smaller devices
-    $("input#menu-toggle").prop("checked", false);
+    $("input#menu-toggle").prop("checked", false).change();
 })
 
 /** 
