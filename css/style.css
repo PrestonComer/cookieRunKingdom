@@ -304,6 +304,7 @@ td.simulateNumInput {
         color: #FFF;
         height: 50px;
         padding: 1em;
+        min-width: 330px;
       }
 
     .menu-button-container {
